@@ -8,7 +8,7 @@ public class LruCacheClient {
         lru.put(3,"c");
         lru.put(4,"d");
 
-
+        System.out.println(lru.get(3));
         lru.put(5,"d");
          lru.put(6,"b");
          lru.print();

@@ -1,15 +1,17 @@
 package LruCache.customCollections;
 
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class LruCache {
     private final int capacity;
-    Map<Integer,String> store;
+    LinkedHashMap<Integer,String> store;
     LinkedList order;
     public LruCache(int capacity) {
         this.capacity = capacity;
-        store = new ConcurrentHashMap<>(capacity);
+//        store = new ConcurrentHashMap<>(capacity);
+        store=new LinkedHashMap<Integer,String>(3);
         order = new LinkedList();
     }
 
@@ -54,6 +56,7 @@ public class LruCache {
 
     void print(){
         store.entrySet().forEach(System.out::println);
+
     }
 
 

@@ -13,7 +13,7 @@ public class LruCache<T,S> {
             throw new RuntimeException("Capacity Cannot be negative");
         }
         this.capacity = capacity;
-        store = new ConcurrentHashMap<>(capacity);
+        store = new HashMap<>(capacity);
         order = new LinkedList<>();
     }
 
@@ -47,7 +47,7 @@ public class LruCache<T,S> {
 
 
     public synchronized S get(T key){
-/*      for this we need to check if the key is there if yes then reorder in the order list and return;
+/*      for this we need to check if the key is there if yes then reorder in the order list and return
         for reorder first get then remove and add tho the last*/
        S value = store.get(key);
         if (value != null) {

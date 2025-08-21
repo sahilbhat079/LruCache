@@ -18,13 +18,14 @@ public class Test {
         lru.put(1,"a");
         lru.put(2,"b");
         lru.put(3,"c");
-        lru.put(4,"e");
-        lru.put(6,"f");
+        lru.put(4,"d");
 
 
 
         System.out.println(lru.get(3));
         lru.put(5,"g");
+        lru.put(4,"a");
+        lru.put(6, "g");
         System.out.println(lru.get(4));
         lru.print();
 

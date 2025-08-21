@@ -9,4 +9,9 @@ public class Node{
         next=null;
         prev=null;
     }
+
+    @Override
+    public String toString() {
+        return  "value=" + value;
+    }
 }
